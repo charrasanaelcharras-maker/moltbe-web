@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  background-color: #111;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffa31a;
+  margin: 0;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.category-card {
+  width: 220px;
+  height: 180px;
+  border: 2px solid #ffa31a;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 163, 26, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* oscurece un poco las imágenes */
+  transition: background 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffa31a;
+}
+
+.category-card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.category-card h2 {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Fondo de cada categoría */
+.cafeteria {
+  background-image: url("cafeteria.png.jpeg");
+}
+
+.lomitos {
+  background-image: url("lomitos.png");
+}
+
+.pizzas {
+  background-image: url("pizza.png");
+}
+
+.hamburguesas {
+  background-image: url("hamburguesas.png");
+}
+
+footer {
+  background-color: #111;
+  padding: 15px;
+  color: #ccc;
+  font-size: 0.9em;
+}
+/* ======= Página de Cafetería ======= */
+.top-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* para que se acomode si la pantalla es chica */
+}
+
+.top-gallery img {
+  width: 25%;              /* tres imágenes pequeñas y alineadas */
+  max-width: 200px;        /* límite de tamaño */
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ffa31a;
+  transition: transform 0.3s;
+}
+
+.top-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.menu-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.menu-img {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 2px solid #ffa31a;
+  box-shadow: 0 0 15px rgba(255, 163, 26, 0.3);
+}
+
+.back-link {
+  color: #ffa31a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ======= Logo general ======= */
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.logo {
+  width: 200px;       /* 🔸 tamaño más pequeño */
+  height: auto;
+  margin: 15px auto 5px auto;
+  display: block;     /* centra la imagen */
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
