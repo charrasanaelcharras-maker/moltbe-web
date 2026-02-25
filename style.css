@@ -299,3 +299,13 @@ footer {
     width: 95%;
   }
 }
+/* ===== Zoom solo a la imagen del medio en galería Lomitos ===== */
+.galeria-lomitos .galeria-item:nth-child(2) img {
+  transform: scale(1.2); /* nivel de zoom */
+  transition: transform 0.3s ease;
+}
+
+/* Para que no se salga del cuadro */
+.galeria-lomitos .galeria-item {
+  overflow: hidden;
+}
