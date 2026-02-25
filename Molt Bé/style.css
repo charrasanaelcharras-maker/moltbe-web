@@ -78,7 +78,7 @@ h1 {
 
 /* Fondo de cada categoría */
 .cafeteria {
-  background-image: url("cafeteria.png.jpeg");
+  background-image: url("cafeteria.jpg");
 }
 
 .lomitos {
@@ -93,12 +93,26 @@ h1 {
   background-image: url("hamburguesas.png");
 }
 
+/* 🥔 Nueva categoría: Papas Fritas */
+.papas {
+  background-image: url("papas.jpg"); /* Cambiá el nombre según tu imagen */
+  background-size: cover;
+  background-position: center;
+}
+/* 🧒 Nueva categoría: Menú Kids */
+.menukids {
+  background-image: url("kids.jpeg"); /* Cambiá por tu imagen real */
+  background-size: cover;
+  background-position: center;
+}
+
 footer {
   background-color: #111;
   padding: 15px;
   color: #ccc;
   font-size: 0.9em;
 }
+
 /* ======= Página de Cafetería ======= */
 .top-gallery {
   display: flex;
@@ -189,4 +203,90 @@ footer {
 .whatsapp-icon {
   width: 35px;
   height: 35px;
+}
+
+/* Sección de promos de Instagram */
+.promo-instagram {
+  text-align: center;
+  margin: 15px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.promo-instagram p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.instagram-link {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instagram-link:hover {
+  text-decoration: underline;
+}
+
+/* Botón flotante de Instagram */
+.instagram-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 90px; /* un poco más arriba que el de WhatsApp */
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.instagram-float:hover {
+  transform: scale(1.1);
+}
+
+.instagram-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* Barra superior de aviso */
+.aviso-pedidos {
+  background-color: #25d366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ======= Doble menú lado a lado ======= */
+.doble-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.doble-menu .menu-img {
+  width: 48%;
+  max-width: 700px;
+}
+
+/* 📱 En celular que ocupen casi todo */
+@media (max-width: 768px) {
+  .doble-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doble-menu .menu-img {
+    width: 95%;
+  }
 }
