@@ -20,6 +20,15 @@ h1 {
   color: #fff;
   font-size: 1.2em;
 }
+/* ======= Ajuste visual para doble menú (Hamburguesas y Lomitos) ======= */
+.doble-menu .menu-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doble-menu .menu-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 163, 26, 0.4);
+}
 
 .categories {
   display: flex;
