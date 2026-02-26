@@ -342,14 +342,15 @@ footer {
   right: 10px;
   background: white;
   color: black;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   font-size: 20px;
-  display: flex;              /* SIEMPRE visible estructuralmente */
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  opacity: 0;                 /* invisible al inicio */
+  z-index: 9999;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
