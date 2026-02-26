@@ -19,10 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 const popup = document.getElementById("popup-aviso");
 const cerrar = document.getElementById("cerrar-popup");
 
-setTimeout(() => {
-  cerrar.style.opacity = "1";
-}, 1000);
+cerrar.style.opacity = "1";
 
 cerrar.addEventListener("click", function() {
   popup.style.display = "none";
 });
+
