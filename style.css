@@ -351,6 +351,6 @@ footer {
   align-items: center;
   cursor: pointer;
   z-index: 9999;
-  opacity: 0;
+  opacity: 1; /* ← ACÁ estaba el problema */
   transition: opacity 0.3s ease;
 }
