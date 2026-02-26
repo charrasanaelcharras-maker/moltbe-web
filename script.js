@@ -16,17 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
     lightbox.style.display = "none";
   });
 
-  // ===== POPUP =====
-  const popup = document.getElementById("popup-aviso");
-  const cerrar = document.getElementById("cerrar-popup");
+const popup = document.getElementById("popup-aviso");
+const cerrar = document.getElementById("cerrar-popup");
 
-  setTimeout(() => {
-    cerrar.style.display = "flex";
-  }, 1000);
+setTimeout(() => {
+  cerrar.style.opacity = "1";
+}, 1000);
 
-  cerrar.addEventListener("click", function() {
-    popup.style.display = "none";
-  });
-
+cerrar.addEventListener("click", function() {
+  popup.style.display = "none";
 });
-
