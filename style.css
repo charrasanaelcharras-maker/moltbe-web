@@ -338,17 +338,18 @@ footer {
 }
 .cerrar {
   position: absolute;
-  top: 10px;      /* baja la X dentro del cuadro */
-  right: 10px;    /* la pega al lado derecho */
+  top: 10px;
+  right: 10px;
   background: white;
   color: black;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   font-size: 20px;
-  display: none;  /* sigue apareciendo después del segundo */
+  display: flex;              /* SIEMPRE visible estructuralmente */
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  opacity: 0;                 /* invisible al inicio */
+  transition: opacity 0.3s ease;
 }
-
