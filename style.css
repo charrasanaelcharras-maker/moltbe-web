@@ -309,48 +309,165 @@ footer {
 .galeria-lomitos .galeria-item {
   overflow: hidden;
 }
-/* FONDO OSCURO QUE CUBRE TODO */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+
+/* ======= Reconocimiento integrado en portada ======= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #080a09;
 }
 
-/* CAJA CENTRADA */
-.popup-contenido {
+header {
+  background: radial-gradient(circle at 50% -20%, #274c37, #101713 55%, #080a09);
+  padding: 20px 20px 8px;
+}
+
+.aviso-pedidos {
+  background: #d8f2b0;
+  color: #183523;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.logo {
+  width: min(190px, 58vw);
+}
+
+.award-hero {
+  max-width: 1080px;
+  margin: 28px auto 12px;
+  padding: clamp(24px, 5vw, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 62px);
+  text-align: left;
+  border: 1px solid rgba(216, 242, 176, 0.35);
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 0%, rgba(216, 242, 176, 0.16), transparent 32%),
+    linear-gradient(135deg, #173326 0%, #0d1811 72%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.26);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #d8f2b0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.award-hero h1 {
+  margin: 0;
+  color: #fffdf7;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4.1vw, 3.8rem);
+  line-height: 1.04;
+}
+
+.award-description {
+  max-width: 560px;
+  margin: 20px 0 26px;
+  color: #d6ddd4;
+  font-size: clamp(1rem, 1.8vw, 1.13rem);
+  line-height: 1.6;
+}
+
+.award-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: #d8f2b0;
+  color: #183523;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.award-cta:hover,
+.award-cta:focus-visible {
+  background: #f0ffd9;
+  transform: translateY(-2px);
+}
+
+.award-media {
   position: relative;
-  max-width: 400px;
-  width: 90%;
+  margin: 0;
 }
 
-/* IMAGEN */
-.popup-img {
-  width: 100%;
-  border-radius: 15px;
-  display: block;
-}
-.cerrar {
+.award-media::before {
+  content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: white;
-  color: black;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 9999;
-  opacity: 1; /* ← ACÁ estaba el problema */
-  transition: opacity 0.3s ease;
+  inset: 7% -7% -7% 7%;
+  border: 1px solid rgba(216, 242, 176, 0.3);
+  border-radius: 23px;
+}
+
+.award-media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-height: 390px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+}
+
+.award-media p {
+  position: relative;
+  z-index: 2;
+  margin: 13px 0 0;
+  color: #d8f2b0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.categories {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 28px;
+}
+
+.category-card {
+  border-color: rgba(216, 242, 176, 0.75);
+  border-radius: 18px;
+}
+
+.category-card:hover {
+  box-shadow: 0 0 24px rgba(216, 242, 176, 0.5);
+}
+
+@media (max-width: 700px) {
+  .award-hero {
+    grid-template-columns: 1fr;
+    margin: 18px 14px 4px;
+    padding: 28px 22px;
+    border-radius: 22px;
+  }
+
+  .award-copy {
+    text-align: center;
+  }
+
+  .award-description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .award-media {
+    width: min(290px, 100%);
+    justify-self: center;
+  }
+
+  .categories {
+    padding-top: 24px;
+  }
 }
