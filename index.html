@@ -3,53 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Molt Bé: lomitos, pizzas, hamburguesas, cafetería y más en La Calera.">
   <title>Molt Bé | Menú</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body class="home">
 
   <div class="aviso-pedidos">
-    📢 Todos los pedidos se realizan únicamente vía WhatsApp 📱
+    <span aria-hidden="true">💬</span> Hacé tu pedido por WhatsApp
   </div>
 
-  <header>
-    <a href="index.html" class="logo-link">
-      <img src="logo.jpeg" alt="Molt Bé Logo" class="logo">
-    </a>
+  <header class="site-header">
+    <nav class="topbar" aria-label="Navegación principal">
+      <a href="index.html" class="logo-link" aria-label="Inicio Molt Bé">
+        <img src="logo.jpeg" alt="Molt Bé" class="logo">
+      </a>
+      <a href="https://www.instagram.com/moltbelacalera" target="_blank" rel="noopener noreferrer" class="social-link">
+        <span aria-hidden="true">◎</span> @moltbelacalera
+      </a>
+    </nav>
 
-    <div class="promo-instagram">
-      <p>¡Chequeá nuestras promos en nuestro Instagram!</p>
-      <a href="https://www.instagram.com/moltbelacalera" target="_blank" class="instagram-link">@moltbelacalera</a>
+    <div class="home-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Sabores que se disfrutan</p>
+        <h1>Tu antojo tiene<br>un lugar.</h1>
+        <p>Desde un café para arrancar el día hasta una cena para compartir: elegí lo que más te guste y hacé tu pedido en un toque.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="button button-primary">Ver el menú <span aria-hidden="true">↓</span></a>
+          <a href="https://wa.me/5493516360034" target="_blank" rel="noopener noreferrer" class="button button-secondary">Pedir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="lomitos.png" alt="Lomito de Molt Bé">
+      </div>
     </div>
-
-    <p class="subtitle">Elegí tu categoría</p>
   </header>
 
-  <section class="award-hero" aria-labelledby="award-title">
-    <div class="award-copy">
-      <p class="eyebrow">Orgullo de La Calera</p>
-      <h1 id="award-title">Ganadores del 6.º Festival Nacional del Lomito</h1>
-      <p class="award-description">Nuestro lomito gourmet fue reconocido con el Premio Lomito de la Gente y el 2.º puesto de la categoría.</p>
-      <a href="lomitos.html" class="award-cta">Conocé nuestros lomitos <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="award-media">
-      <img src="entrada.jpg" alt="Reconocimiento de Molt Bé en el Festival Nacional del Lomito">
-      <p>Hecho con pasión, para que cada bocado cuente.</p>
-    </div>
-  </section>
+  <main>
+    <section class="menu-overview" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <p class="eyebrow">Nuestro menú</p>
+        <h2 id="menu-title">¿Qué te gustaría comer hoy?</h2>
+        <p>Elegí una categoría y encontrá todos los sabores disponibles.</p>
+      </div>
 
-  <main class="categories">
-    <a href="cafeteria.html" class="category-card cafeteria"><h2>Cafetería</h2></a>
-    <a href="lomitos.html" class="category-card lomitos"><h2>Lomos</h2></a>
-    <a href="pizzas.html" class="category-card pizzas"><h2>Pizzas</h2></a>
-    <a href="hamburguesas.html" class="category-card hamburguesas"><h2>Hamburguesas</h2></a>
-    <a href="papas.html" class="category-card papas"><h2>Papas Fritas</h2></a>
-    <a href="kids.html" class="category-card menukids"><h2>Menú Kids</h2></a>
+      <div class="categories">
+        <a href="cafeteria.html" class="category-card cafeteria">
+          <span class="category-number">01</span>
+          <h3>Cafetería</h3>
+          <span class="category-link">Ver opciones <span aria-hidden="true">→</span></span>
+        </a>
+        <a href="lomitos.html" class="category-card lomitos">
+          <span class="category-number">02</span>
+          <h3>Lomitos</h3>
+          <span class="category-link">Ver opciones <span aria-hidden="true">→</span></span>
+        </a>
+        <a href="pizzas.html" class="category-card pizzas">
+          <span class="category-number">03</span>
+          <h3>Pizzas</h3>
+          <span class="category-link">Ver opciones <span aria-hidden="true">→</span></span>
+        </a>
+        <a href="hamburguesas.html" class="category-card hamburguesas">
+          <span class="category-number">04</span>
+          <h3>Hamburguesas</h3>
+          <span class="category-link">Ver opciones <span aria-hidden="true">→</span></span>
+        </a>
+        <a href="papas.html" class="category-card papas">
+          <span class="category-number">05</span>
+          <h3>Papas fritas</h3>
+          <span class="category-link">Ver opciones <span aria-hidden="true">→</span></span>
+        </a>
+        <a href="kids.html" class="category-card menukids">
+          <span class="category-number">06</span>
+          <h3>Menú Kids</h3>
+          <span class="category-link">Ver opciones <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="order-guide" aria-labelledby="guide-title">
+      <div>
+        <p class="eyebrow">Simple y rico</p>
+        <h2 id="guide-title">Elegís. Pedís. Disfrutás.</h2>
+      </div>
+      <ol>
+        <li><span>1</span> Mirá el menú</li>
+        <li><span>2</span> Escribinos por WhatsApp</li>
+        <li><span>3</span> Disfrutá Molt Bé</li>
+      </ol>
+    </section>
   </main>
 
+  <a href="https://wa.me/5493516360034" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Hacer un pedido por WhatsApp">
+    <img src="whatsapp.png" alt="">
+  </a>
+
   <footer>
-    <p>©️ 2026 Molt Bé - Todos los derechos reservados</p>
+    <a href="index.html" class="footer-brand">Molt Bé</a>
+    <p>Hecho con mucho sabor en La Calera.</p>
+    <a href="https://www.instagram.com/moltbelacalera" target="_blank" rel="noopener noreferrer">@moltbelacalera</a>
+    <p class="copyright">© 2026 Molt Bé</p>
   </footer>
 
   <script src="script.js"></script>
